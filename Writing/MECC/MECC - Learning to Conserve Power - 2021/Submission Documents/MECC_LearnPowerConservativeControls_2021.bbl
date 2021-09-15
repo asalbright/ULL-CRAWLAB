@@ -1,0 +1,144 @@
+\begin{thebibliography}{26}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Ahmadi and Buehler(1997)}]{Ahmadi1997}
+Ahmadi, M., Buehler, M., 1997. {Stable control of a simulated one-legged
+  running robot with hip and leg compliance}. IEEE Transactions on Robotics and
+  Automation 13~(1), 96--104.
+
+\bibitem[{Bhagat et~al.(2019)Bhagat, Banerjee, Tse, and Ren}]{Bhagat2019e}
+Bhagat, S., Banerjee, H., Tse, Z. T.~H., Ren, H., 2019. {Deep reinforcement
+  learning for soft, flexible robots: Brief review with impending challenges}.
+  Robotics 8~(1), 1--36.
+
+\bibitem[{Blackman et~al.(2018)Blackman, Nicholson, Pusey, Austin, Young,
+  Brown, and Clark}]{Blackman2018}
+Blackman, D.~J., Nicholson, J.~V., Pusey, J.~L., Austin, M.~P., Young, C.,
+  Brown, J.~M., Clark, J.~E., 2018. {Leg design for running and jumping
+  dynamics}. 2017 IEEE International Conference on Robotics and Biomimetics,
+  ROBIO 2017 2018-Janua, 2617--2623.
+
+\bibitem[{Blickhan and Full(1993)}]{Blickhan1993a}
+Blickhan, R., Full, R.~J., 1993. {Similarity in multilegged locomotion:
+  Bouncing like a monopode}. Journal of Comparative Physiology A 173~(5),
+  509--517.
+
+\bibitem[{Cui et~al.(2019)Cui, Chen, Wang, and Wang}]{Cui2019e}
+Cui, L., Chen, W., Wang, H., Wang, J., 2019. {Control of Flexible Manipulator
+  Based on Reinforcement Learning}. Proceedings 2018 Chinese Automation
+  Congress, CAC 2018, 2744--2749.
+
+\bibitem[{Dwiel et~al.(2019)Dwiel, Candadai, and Phielipp}]{Dwiel2019d}
+Dwiel, Z., Candadai, M., Phielipp, M., 2019. {On Training Flexible Robots using
+  Deep Reinforcement Learning}. IEEE International Conference on Intelligent
+  Robots and Systems, 4666--4671.
+
+\bibitem[{Folkertsma et~al.(2012)Folkertsma, Kim, and
+  Stramigioli}]{Folkertsma2012}
+Folkertsma, G.~A., Kim, S., Stramigioli, S., 2012. {Parallel stiffness in a
+  bounding quadruped with flexible spine}. IEEE International Conference on
+  Intelligent Robots and Systems, 2210--2215.
+
+\bibitem[{Fujimoto et~al.(2018)Fujimoto, {Van Hoof}, and Meger}]{Fujimoto2018d}
+Fujimoto, S., {Van Hoof}, H., Meger, D., 2018. {Addressing Function
+  Approximation Error in Actor-Critic Methods}. 35th International Conference
+  on Machine Learning, ICML 2018 4, 2587--2601.
+
+\bibitem[{Galloway et~al.(2011)Galloway, Clark, Yim, and
+  Koditschek}]{Galloway2011}
+Galloway, K.~C., Clark, J.~E., Yim, M., Koditschek, D.~E., 2011. {Experimental
+  investigations into the role of passive variable compliant legs for dynamic
+  robotic locomotion}. Proceedings - IEEE International Conference on Robotics
+  and Automation, 1243--1249.
+
+\bibitem[{Ha et~al.(2018)Ha, Kim, and Yamane}]{Ha2018a}
+Ha, S., Kim, J., Yamane, K., 2018. {Automated Deep Reinforcement Learning
+  Environment for Hardware of a Modular Legged Robot}. 2018 15th International
+  Conference on Ubiquitous Robots, UR 2018, 348--354.
+
+\bibitem[{Harper et~al.(2019)Harper, Nicholson, Collins, Pusey, and
+  Clark}]{Harper2019}
+Harper, M.~Y., Nicholson, J.~V., Collins, E.~G., Pusey, J., Clark, J.~E., 2019.
+  {Energy efficient navigation for running legged robots}. Proceedings - IEEE
+  International Conference on Robotics and Automation 2019-May, 6770--6776.
+
+\bibitem[{He et~al.(2020)He, Gao, Zhou, Yang, and Li}]{He2020f}
+He, W., Gao, H., Zhou, C., Yang, C., Li, Z., 2020. {Reinforcement Learning
+  Control of a Flexible Two-Link Manipulator: An Experimental Investigation}.
+  IEEE Transactions on Systems, Man, and Cybernetics: Systems, 1--11.
+
+\bibitem[{Hurst(2008)}]{Hurst2008}
+Hurst, J., 2008. {The Role and Implementation of Compliance in Legged
+  Locomotion}. The International Journal of Robotics Research 25~(4), 110.
+
+\bibitem[{Iida et~al.(2005)Iida, G{\'{o}}mez, and Pfeifer}]{Iida2005}
+Iida, F., G{\'{o}}mez, G., Pfeifer, R., 2005. {Exploiting body dynamics for
+  controlling a running quadruped robot}. 2005 International Conference on
+  Advanced Robotics, ICAR '05, Proceedings 2005, 229--235.
+
+\bibitem[{Kani and Ahmadabadi(2013)}]{Kani2013}
+Kani, M. H.~H., Ahmadabadi, M.~N., 2013. {Comparing effects of rigid, flexible,
+  and actuated series-elastic spines on bounding gait of quadruped robots},
+  282--287.
+
+\bibitem[{Lillicrap et~al.(2016)Lillicrap, Hunt, Pritzel, Heess, Erez, Tassa,
+  Silver, and Wierstra}]{Lillicrap2016h}
+Lillicrap, T.~P., Hunt, J.~J., Pritzel, A., Heess, N., Erez, T., Tassa, Y.,
+  Silver, D., Wierstra, D., 2016. {Continuous control with deep reinforcement
+  learning}. 4th International Conference on Learning Representations, ICLR
+  2016 - Conference Track Proceedings.
+
+\bibitem[{Park et~al.(2017)Park, Wensing, and Kim}]{Park2017}
+Park, H.~W., Wensing, P.~M., Kim, S., 2017. {High-speed bounding with the MIT
+  Cheetah 2: Control design and experiments}. International Journal of Robotics
+  Research 36~(2), 167--192.
+
+\bibitem[{Peng et~al.(2016)Peng, Berseth, and Panne}]{Peng2016}
+Peng, X.~B., Berseth, G., Panne, M. V.~D., 2016. {Terrain-Adaptive Locomotion
+  Skills Using Deep Reinforcement Learning} 35~(4), 1--12.
+
+\bibitem[{Pratt and Williamson(1995)}]{Pratt1995}
+Pratt, G.~A., Williamson, M.~M., 1995. {Series elastic actuators}. IEEE
+  International Conference on Intelligent Robots and Systems 1, 399--406.
+
+\bibitem[{Reda et~al.(2020)Reda, Tao, and van~de Panne}]{Reda2020c}
+Reda, D., Tao, T., van~de Panne, M., 2020. {Learning to Locomote: Understanding
+  How Environment Design Matters for Deep Reinforcement Learning}.
+
+\bibitem[{Seok et~al.(2015)Seok, Wang, Chuah, Hyun, Lee, Otten, Lang, and
+  Kim}]{Seok2015}
+Seok, S., Wang, A., Chuah, M.~Y., Hyun, D.~J., Lee, J., Otten, D.~M., Lang,
+  J.~H., Kim, S., 2015. {Design principles for energy-efficient legged
+  locomotion and implementation on the MIT Cheetah robot}. IEEE/ASME
+  Transactions on Mechatronics 20~(3), 1117--1129.
+
+\bibitem[{Seok et~al.(2013)Seok, Wang, Chuah, Otten, Lang, and Kim}]{Seok2013}
+Seok, S., Wang, A., Chuah, M.~Y., Otten, D., Lang, J., Kim, S., 2013. {Design
+  principles for highly efficient quadrupeds and implementation on the MIT
+  Cheetah robot}. In: Proceedings - IEEE International Conference on Robotics
+  and Automation. IEEE, pp. 3307--3312.
+
+\bibitem[{Sugiyama and Hirai(2004)}]{Sugiyama2004}
+Sugiyama, Y., Hirai, S., 2004. {Crawling and jumping of deformable soft robot}.
+  2004 IEEE/RSJ International Conference on Intelligent Robots and Systems
+  (IROS) 4~(c), 3276--3281.
+
+\bibitem[{Thuruthel et~al.(2019)Thuruthel, Falotico, Renda, and
+  Laschi}]{Thuruthelb}
+Thuruthel, T.~G., Falotico, E., Renda, F., Laschi, C., 2019. {Model Based
+  Reinforcement Learning for Closed Loop Dynamic Control of Soft Robotic
+  Manipulators}. IEEE Transactions on Robotics 35, 124--134.
+
+\bibitem[{Vaughan(2013)}]{Vaughan2013}
+Vaughan, J., 2013. {Jumping Commands For Flexible-Legged Robots}.
+
+\bibitem[{Yang et~al.(2019)Yang, Caluwaerts, Iscen, Zhang, Tan, and
+  Sindhwani}]{Yang2019}
+Yang, Y., Caluwaerts, K., Iscen, A., Zhang, T., Tan, J., Sindhwani, V., 2019.
+  {Data efficient reinforcement learning for legged robots}. arXiv~(CoRL),
+  1--10.
+
+\end{thebibliography}

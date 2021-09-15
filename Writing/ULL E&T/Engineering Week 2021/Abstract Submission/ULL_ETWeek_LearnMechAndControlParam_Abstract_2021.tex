@@ -1,0 +1,116 @@
+% ----------------------------------------------------------------------
+%   filename:      ULL_ETWeek_LearnMechAndControlParam_Abstract_2021.tex
+%   description:   This is an abstract for submission
+% ----------------------------------------------------------------------
+\documentstyle[11pt]{article}
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\marginparwidth}{0.0in}
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.2in}
+
+%%%% Change detc to the short name of your conference %%%%%%%%%%%%%
+\def\confshortname{ULL E&T}
+%%%% Change 1998 to the year of the conference %%%%%%%%%%%%%%%%%%%%
+\def\confyear{2021}
+
+\begin{document}
+
+\newfont{\hvb}{cmssbx10}
+\newfont{\hv}{cmss10}
+\newfont{\tir}{cmr10}
+
+\setlength{\baselineskip}{10pt}
+{\scriptsize{\hvb
+\begin{flushright}
+%Extended Abstract \\
+%%%%%%%%%%%%%%%%%%%%%%%  paper number %%%%%%%%%%%%%%%%%%%%%%%%%%%
+Paper \#      %% change DETC98/DAC-1234 to the paper number
+                     %% provided by ASME for your paper.
+\end{flushright}
+}}
+
+{\footnotesize{\hvb
+%%%%%%%%%%%%%%%%%%%%%%%%%  paper title   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Learning Optimal Control Strategies and Design Parameters for Flexible-legged Locomotive Systems
+}}
+
+\vspace{10pt}
+\setlength{\baselineskip}{11pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{.49\textwidth} %
+    \begin{center} % First author %
+        {\footnotesize
+        {\hvb Andrew S. Albright}, {\hv Graduate Researcher} \\
+        {\hv
+        Department of Mechanical Engineering \\
+        University of Louisiana at Lafayette\\
+        Lafayette, LA 70503\\
+        Tel: 919-671-5358\\ 
+        andrew.albright1@louisiana.edu
+        }} 
+    \end{center}
+\end{minipage}
+\begin{minipage}[t]{.49\textwidth} % Second Author %
+    \begin{center}
+        {\footnotesize
+        {\hvb Joshua Vaughan}, {\hv Associate Professor} \\
+        {\hv
+        Department of Mechanical Engineering \\
+        University of Louisiana at Lafayette\\
+        Lafayette, LA, 70503, \\
+        Tel: 337-482-1207\\ 
+        joshua.vaughan@louisiana.edu
+        }}
+    \end{center}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%    Abstract Text    %%%%%%%%%%%%%%%%%%%%%%%%
+{\footnotesize{\tir
+\begin{center}
+    \textbf{Main Takeaway}:
+\end{center}
+\vspace{-.25in}
+An actor critic RL algorithm can be used to train an agent which can define mechanical parameters of a flexible system to maximize performance given a consistent control input.
+
+\begin{center}
+    \textbf{Extended Abstract:}
+\end{center}
+\vspace{-.25in}
+
+Legged systems have many advantages when compared to their wheeled counterparts. For example, they can more easily navigate extreme, uneven terrain. However, there are disadvantages as well, including dramatically less efficient locomotion. In an effort to mitigate this disadvantage, research has been conducted that shows using flexible components in legged locomotive systems not only increases their efficiency but also their performance \cite{Sugiyama2004}. However, nonlinear models and controllers for flexible systems are difficult to develop using traditional methods. Trading flexible links for flexible joints is a mechanical solution which has been studied to solve some of these difficulties \cite{Ghorbel1990}. However, they do not represent the full capability of truly flexible systems. 
+
+Because of the difficulties encountered in modeling flexible systems, control methods have been developed that use neural networks to represent the nonlinear aspects of the control architecture. One of these methods is reinforcement learning (RL). Beyond tasking an RL algorithm to control the system, it can also be used to select mechanical parameters such as the size and flexibility of links. Previous work has shown that this method can be successful at defining both mechanical parameters and control strategies for rigid systems \cite{Schaff2019a}, \cite{Ha2019j}.
+
+In this work, an RL method is used to maximize the jumping capability of flexible-legged locomotive systems while minimizing their power consumption. Two separate pogo-stick environments were developed to evaluate the effectiveness of using an RL trained agent to define the control input of the system and optimizing the system's spring constant for a given control input \cite{Vaughan2013}. The results show that this is a promising method of defining mechanical parameters and control strategies for flexible locomotive systems. In the environment where the RL agent finds an optimal design for a control input, a nearly order of magnitude increase in jump height is observed compared to a random agent. When observing the environment which the agent designs a control input for the mechanical parameters, higher jumping performance is also observed along with shorter duration control inputs leading to higher levels of efficiency.
+
+\vspace{10pt}
+{\bf Keywords:} Reinforcement Learning, Neural Network, Control Input, Flexible Systems
+
+\bibliographystyle{ieeetr}
+\bibliography{C:/Users/andre/Documents/BibTeX/CRAWLAB-Writing-IMECE-2021.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}}
+
+\vspace{\fill}
+{\scriptsize{\hv
+\begin{flushbottom}
+\begin{flushright}
+Copyright \copyright\ \confyear\ by ASME
+\end{flushright}
+\end{flushbottom}
+}}
+
+
+
+\end{document}
+
+

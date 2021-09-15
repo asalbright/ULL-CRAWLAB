@@ -1,0 +1,290 @@
+<?xml version="1.0" ?>
+<robot name="Single_Leg_Jumping_Robot">
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.003175"/>
+    <mass value="1.5928226207999996"/>
+    <inertia ixx="0.012336857520267846" ixy="0.0" ixz="-1.227817847393453e-19" iyy="0.01233685752026787" iyz="1.227817847393453e-19" izz="0.024663010608847846"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_rail1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.3982002845782284e-16 8.322062605568434e-06 0.3048000000000011"/>
+    <mass value="0.46108441303789777"/>
+    <inertia ixx="0.014308962028525697" ixy="-1.7311394128460304e-16" ixz="4.952794952137532e-17" iyy="0.014309052908749675" iyz="-3.272130626890725e-17" izz="6.058582538467631e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 -0.00635"/>
+    <geometry>
+      <mesh filename="meshes/L_rail1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 -0.00635"/>
+    <geometry>
+      <mesh filename="meshes/L_rail1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_bearing1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.012852400000000043 0.010327940591961998 -0.02368549999994335"/>
+    <mass value="0.11445580323219645"/>
+    <inertia ixx="3.1474999743319465e-05" ixy="-2.0753630696710443e-18" ixz="-1.9651164376299768e-19" iyy="6.691514856178339e-05" iyz="2.3201926491189795e-17" izz="5.39187547508936e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0127 0.0 -0.31115"/>
+    <geometry>
+      <mesh filename="meshes/L_bearing1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0127 0.0 -0.31115"/>
+    <geometry>
+      <mesh filename="meshes/L_bearing1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_housing_upper1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.999999943100083e-07 0.011438936433210149 -4.999999999033555e-07"/>
+    <mass value="0.24096966903002934"/>
+    <inertia ixx="5.771345250499618e-05" ixy="8.201608270026577e-18" ixz="1.4907779871675686e-19" iyy="0.00010904774682429785" iyz="4.336808689942018e-19" izz="0.00011445375550853538"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000152 -0.020625 -0.287465"/>
+    <geometry>
+      <mesh filename="meshes/L_housing_upper1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000152 -0.020625 -0.287465"/>
+    <geometry>
+      <mesh filename="meshes/L_housing_upper1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_motor_upper1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.999999999823101e-07 0.007362699659806571 -0.007363399659806813"/>
+    <mass value="0.2763927635732037"/>
+    <inertia ixx="4.9614093129958514e-05" ixy="-1.4823076576950256e-18" ixz="1.3806637040245096e-18" iyy="5.8066309114951364e-05" iyz="1.2077890961398503e-05" izz="5.8066309114967194e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000152 -0.054405 -0.287465"/>
+    <geometry>
+      <mesh filename="meshes/L_motor_upper1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000152 -0.054405 -0.287465"/>
+    <geometry>
+      <mesh filename="meshes/L_motor_upper1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_link_upper1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.9999999991744773e-07 0.049497478118654695 -0.0494971781186547"/>
+    <mass value="0.3516799999999987"/>
+    <inertia ixx="0.0005762862933332384" ixy="1.5983511714688647e-18" ixz="1.853308088592409e-18" iyy="0.00033503381333331583" iyz="0.00028626752000000637" izz="0.0003350338133333696"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000152 -0.075618 -0.266251"/>
+    <geometry>
+      <mesh filename="meshes/L_link_upper1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000152 -0.075618 -0.266251"/>
+    <geometry>
+      <mesh filename="meshes/L_link_upper1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_housing_lower1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.999999999043289e-07 0.011695490840459677 -0.011695190840459557"/>
+    <mass value="0.15698254212200188"/>
+    <inertia ixx="2.7347126989077722e-05" ixy="-1.6473096758201633e-17" ixz="1.2249366966718064e-17" iyy="5.1599123840350564e-05" iyz="6.0656800972011884e-06" izz="5.159912384034796e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000152 -0.174613 -0.167256"/>
+    <geometry>
+      <mesh filename="meshes/L_housing_lower1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000152 -0.174613 -0.167256"/>
+    <geometry>
+      <mesh filename="meshes/L_housing_lower1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_motor_lower1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.9999999991492696e-07 -0.007362879789612142 -0.007362619530001391"/>
+    <mass value="0.2763927635732037"/>
+    <inertia ixx="4.9614093129849227e-05" ixy="3.477070248478903e-17" ixz="4.267097878382989e-17" iyy="5.806630911492708e-05" iyz="-1.2077890961431463e-05" izz="5.806630911492881e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000152 -0.198499 -0.14337"/>
+    <geometry>
+      <mesh filename="meshes/L_motor_lower1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000152 -0.198499 -0.14337"/>
+    <geometry>
+      <mesh filename="meshes/L_motor_lower1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_link_lower1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.00000000005241e-07 -0.04949765824845964 -0.04949739798884868"/>
+    <mass value="0.3516799999999987"/>
+    <inertia ixx="0.0005762862933324829" ixy="3.222960364302613e-17" ixz="7.687416919395854e-17" iyy="0.0003350338133328171" iyz="-0.00028626752000008486" izz="0.00033503381333332104"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000152 -0.177286 -0.122157"/>
+    <geometry>
+      <mesh filename="meshes/L_link_lower1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000152 -0.177286 -0.122157"/>
+    <geometry>
+      <mesh filename="meshes/L_link_lower1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="J_R_base_rail" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.00635"/>
+  <parent link="base_link"/>
+  <child link="L_rail1"/>
+</joint>
+
+<joint name="J_P_rail_bearing" type="prismatic">
+  <origin rpy="0 0 0" xyz="0.0127 0.0 0.3048"/>
+  <parent link="L_rail1"/>
+  <child link="L_bearing1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="100" lower="-0.15" upper="0.2" velocity="100"/>
+</joint>
+<transmission name="J_P_rail_bearing_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="J_P_rail_bearing">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="J_P_rail_bearing_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="J_R_bearing_upperHousing" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.012852 0.020625 -0.023685"/>
+  <parent link="L_bearing1"/>
+  <child link="L_housing_upper1"/>
+</joint>
+
+<joint name="J_C_upperHousing_upperMotor" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.03378 0.0"/>
+  <parent link="L_housing_upper1"/>
+  <child link="L_motor_upper1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit effort="100" lower="-0.523599" upper="0.523599" velocity="100"/>
+</joint>
+<transmission name="J_C_upperHousing_upperMotor_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="J_C_upperHousing_upperMotor">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="J_C_upperHousing_upperMotor_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="J_R_upperHousing_upperLink" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.021213 -0.021214"/>
+  <parent link="L_motor_upper1"/>
+  <child link="L_link_upper1"/>
+</joint>
+
+<joint name="J_R_upperLink_lowerHousing" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.098995 -0.098995"/>
+  <parent link="L_link_upper1"/>
+  <child link="L_housing_lower1"/>
+</joint>
+
+<joint name="J_C_lowerHousing_lowerMotor" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.023886 -0.023886"/>
+  <parent link="L_housing_lower1"/>
+  <child link="L_motor_lower1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit effort="100" lower="-0.523599" upper="0.523599" velocity="100"/>
+</joint>
+<transmission name="J_C_lowerHousing_lowerMotor_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="J_C_lowerHousing_lowerMotor">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="J_C_lowerHousing_lowerMotor_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="J_R_lowerMotor_lowerLink" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.021213 -0.021213"/>
+  <parent link="L_motor_lower1"/>
+  <child link="L_link_lower1"/>
+</joint>
+
+</robot>

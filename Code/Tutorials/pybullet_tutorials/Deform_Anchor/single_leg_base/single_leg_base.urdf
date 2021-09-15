@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<robot name="single_leg_base">
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.7903439011278123e-17 -0.012699999999999862 0.003175"/>
+    <mass value="1.3715999999999993"/>
+    <inertia ixx="0.018292608861749982" ixy="-3.929017111659051e-18" ixz="1.3935732567915642e-19" iyy="0.004576608861749992" iyz="-1.9244588561617704e-18" izz="0.022859999999999978"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L_rail1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="7.651009513282154e-06 4.9259405251779464e-06 0.30480000000000057"/>
+    <mass value="2.430260911584846"/>
+    <inertia ixx="0.07587054220314907" ixy="-7.101633292682228e-07" ixz="-1.8553409676658195e-17" iyy="0.07542558287533979" iyz="8.153200337090993e-17" izz="0.0007770406255538394"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 0.0127 -0.00635"/>
+    <geometry>
+      <mesh filename="meshes/L_rail1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 0.0127 -0.00635"/>
+    <geometry>
+      <mesh filename="meshes/L_rail1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="J_R_base_rail" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.0127 0.00635"/>
+  <parent link="base_link"/>
+  <child link="L_rail1"/>
+</joint>
+
+</robot>

@@ -1,0 +1,127 @@
+% ----------------------------------------------------------------------
+%   filename:      abstract.tex
+%   version:       1.1, 5/28/1997
+%   description:   This is a LaTeX version 2.09 template 
+%                  for the extended abstract of an ASME DETC paper.
+%   usage:         latex abstract
+% ----------------------------------------------------------------------
+\documentstyle[11pt]{article}
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\marginparwidth}{0.0in}
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.2in}
+
+%%%% Change detc to the short name of your conference %%%%%%%%%%%%%
+\def\confshortname{IMECI}
+%%%% Change 1998 to the year of the conference %%%%%%%%%%%%%%%%%%%%
+\def\confyear{2021}
+
+\begin{document}
+
+\newfont{\hvb}{cmssbx10}
+\newfont{\hv}{cmss10}
+\newfont{\tir}{cmr10}
+
+\setlength{\baselineskip}{10pt}
+{\scriptsize{\hvb
+\begin{flushright}
+%Extended Abstract \\
+%%%%%%%%%%%%%%%%%%%%%%%  paper number %%%%%%%%%%%%%%%%%%%%%%%%%%%
+Paper \#      %% change DETC98/DAC-1234 to the paper number
+                     %% provided by ASME for your paper.
+\end{flushright}
+}}
+
+\begin{center}
+{\footnotesize{\hvb
+%%%%%%%%%%%%%%%%%%%%%%%%%  paper title   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Mechanical Evolution of Flexible-Legged with Reinforcement Learning
+}}
+
+\vspace{10pt}
+\setlength{\baselineskip}{11pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   first author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\footnotesize
+{\hvb Andrew S. Albright}, {\hv Graduate Researcher} \\
+{\hv
+Department of Mechanical Engineering \\
+University of Louisiana at Lafayette\\
+Lafayette, LA 70503\\
+Tel: 919-671-5358\\ 
+Email: andrew.albright1@louisiana.edu\\
+}}
+
+\vspace{10pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%   Second/Third authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\footnotesize
+{\hvb Joshua Vaughan}, {\hv Associate Professor} \\
+{\hv
+Department of Mechanical Engineering \\
+University of Louisiana at Lafayette\\
+Lafayette, LA, 70503, \\
+Tel: Phone number\\ 
+Email address, WWW URL address\
+}}
+
+%%%%%%%%%%%%%%%% You may omit information for other authors %%%%%%%%%%%%%%%%%
+%{\footnotesize
+%{\hvb First Coauthor}, {\hv Title} \\
+%{\hv
+%Department or Division Name \\
+%Company or College Name\\
+%}}
+
+\end{center}
+
+\vspace{10pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%    Abstract Text    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\footnotesize{\tir
+\begin{center}
+    \textbf{Main Takeaway}: \\ 
+\end{center}
+
+An actor critic RL algorithm can be used to train an agent which can define mechanical parameters of a flexible system to maximize performance given a consistent control input.
+
+\begin{center}
+    \textbf{Extended Abstract:}
+\end{center}
+
+Legged systems have many advantages when compared to their wheeled counterparts. For example, they can more easily navigate extreme, uneven terrain. However, there are disadvantages as well, including dramatically lower energy efficiency. In an effort to mitigate this disadvantage, research has been conducted that shows using flexible components in operating legged locomotive systems not only increases their efficiency but also their performance \cite{Sugiyama2004}.
+
+However, flexible legged locomotive systems are highly nonlinear and are therefore difficult to develop controllers for using traditional methods. Trading flexible links for flexible joints is a mechanical solution which has been studied to solve some of these difficulties \cite{Ghorbel1990}. However, even though these types of systems are easier to model, they do not represent the full capability of truly flexible systems. 
+
+Because of the difficulties encountered in modeling flexible systems, control methods have been proposed that use neural networks to represent the nonlinear model of the systems and/or implement the control strategy itself. One of these methods is reinforcement learning. Beyond tasking a reinforcement learning algorithm with properly controlling the system, it can also be tasked with learning mechanical parameters such as the size and flexibility of links. Previous work has shown that such a method can be successful at defining both mechanical parameters and control strategies \cite{Schaff2019e}, \cite{Ha2019j}.
+
+In this work, rather than training for both mechanical design and control strategies, a reinforcement learning algorithm is tasked with training an agent to find only the mechanical parameters for a system that has a predetermined control input. To demonstrate the proposed method, a pogo-stick is used to represent a flexible single-legged system. The agent optimizes the spring constant for the given control input \cite{Vaughan2013} with the objective of jumping as high as possible. The results presented show that the proposed approach is a promising method of defining mechanical parameters for flexible locomotive systems. The reinforcement learning algorithm requires little time to train and results in nearly an order of magnitude increase in jump height compared to a random agent. 
+
+\vspace{10pt}
+{\bf Keywords:} Reinforcement Learning, Actor-Critic, Neural Network, Flexible Systems
+
+\bibliographystyle{ieeetr}
+\bibliography{C:/Users/andre/Documents/BibTeX/CRAWLAB-Writing-IMECE-2021.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}}
+
+\vspace{\fill}
+{\scriptsize{\hv
+\begin{flushbottom}
+\begin{flushright}
+Copyright \copyright\ \confyear\ by ASME
+\end{flushright}
+\end{flushbottom}
+}}
+
+
+
+\end{document}
+
+
