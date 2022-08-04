@@ -1,0 +1,13 @@
+Reviewer 1 of ACC 2022 submission 1034
+
+Comments to the author
+======================
+
+Please check the attached file.
+
+Comments on
+Ref.:  Ms. No. ACC22_1034_MS
+Thank you for submitting your manuscript to the 2022
+American Control Conference. This paper proposes Selecting
+Mechanical Parameters of a Monopode Jumping System with
+Reinforcement Learning. 

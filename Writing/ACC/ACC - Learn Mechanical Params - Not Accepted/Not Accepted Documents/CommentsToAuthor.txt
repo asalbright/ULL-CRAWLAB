@@ -1,0 +1,12 @@
+Comments to author (Associate Editor)
+=====================================
+
+This paper uses reinforcement learning (RL) to find the
+parameters of a pogo-stick jumping system. Five reviewers
+evaluated the paper and raised major concerns. In
+particular, there is a large of body of literature on using
+RL for robotic systems, and the novelty and contribution of
+the paper over the prior literature are limited. The
+simulation results are also weak. Moreover, it is not clear
+why RL should be used to solve the underlying problem due
+to the simple structure of the problem. 

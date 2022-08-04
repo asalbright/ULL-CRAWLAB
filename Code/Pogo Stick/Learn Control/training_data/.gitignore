@@ -1,0 +1,5 @@
+# Ignore training data generated from the log files
+**/training_data
+**/trained_plot_data
+**/models
+**/logs

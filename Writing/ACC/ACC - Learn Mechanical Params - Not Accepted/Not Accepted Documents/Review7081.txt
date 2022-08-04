@@ -1,0 +1,28 @@
+Reviewer 4 of ACC 2022 submission 1034
+
+Comments to the author
+======================
+
+This paper uses off-the-shelf RL to find two parameters of
+a pogo-stick (spring constant and damping ratio) with a
+fixed control profile to optimize its maximum jumping
+height. 
+
+=== Strengths ===
++ The proposed is method is motivated well and the related
+work is thorough
+
+=== Weaknesses ===
+- Novelty and Setup: As the authors pointed out, there has
+been an existing large body of research that uses RL for
+design, or joint optimization of policies and the robot
+topology. This paper does not provide any novelty in this
+regard as it uses an existing RL method in an overly
+simplified environment in simulation. 
+- Method and Experiments: Why use the RL formulation when
+the setup is not a sequential decision problem? The reward
+is provided as one-time signal which the agent uses to
+change its spring constant and damping ratio outputs. I
+would also like to see comparison to at least one
+gradient-free optimization which does not follow the RL
+formulation (for example, CMAES).

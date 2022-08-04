@@ -1,0 +1,62 @@
+\backcite {Folkertsma2012}{{ix}{(document)}{Doc-Start}}
+\backcite {Vaughan2013}{{ix}{(document)}{Doc-Start}}
+\backcite {Park2017,Seok2015}{{1}{1}{figure.caption.10}}
+\backcite {Blackman2018}{{1}{1}{figure.caption.10}}
+\backcite {Sugiyama2004,Galloway2011,Seok2015}{{1}{1}{figure.caption.10}}
+\backcite {Hurst2008}{{1}{1}{figure.caption.10}}
+\backcite {Seok2015,Hurst2008}{{2}{1.1}{figure.caption.11}}
+\backcite {Pratt1995,Ahmadi1997}{{2}{1.1}{figure.caption.11}}
+\backcite {Folkertsma2012}{{2}{1.1}{figure.caption.11}}
+\backcite {Kani2013}{{2}{1.1}{figure.caption.11}}
+\backcite {Horigomed}{{2}{1.1}{figure.caption.11}}
+\backcite {Folkertsma2012}{{3}{3}{figure.caption.12}}
+\backcite {Luo1993, Ahmadi1997}{{3}{1.2}{section.1.2}}
+\backcite {He2020f}{{3}{1.2}{section.1.2}}
+\backcite {Lillicrap2016h}{{3}{1.2}{section.1.2}}
+\backcite {Dwiel2019d}{{3}{1.2}{section.1.2}}
+\backcite {Li2001}{{4}{1.3}{section.1.3}}
+\backcite {Chen2020}{{4}{1.3}{section.1.3}}
+\backcite {Schaff2019e}{{4}{1.3}{section.1.3}}
+\backcite {Whitman2020}{{4}{1.3}{section.1.3}}
+\backcite {doi:10.1504/IJDE.2017.085639, briard:hal-02948764}{{4}{1.4}{section.1.4}}
+\backcite {Zhao2020, Vecerik2017, Plappert2018}{{6}{1.5}{section.1.5}}
+\backcite {Fujimoto2018d}{{6}{1.5}{section.1.5}}
+\backcite {Lillicrap2016h}{{6}{1.5}{section.1.5}}
+\backcite {BellmanEquation}{{6}{1.5}{equation.1.5.1}}
+\backcite {Mnihg}{{6}{1.5}{equation.1.5.2}}
+\backcite {Sutton1991, Watkins1989}{{6}{1.5}{equation.1.5.2}}
+\backcite {stable-baselines3}{{9}{1.5}{equation.1.5.8}}
+\backcite {NEURIPS2019_9015}{{9}{1.5}{equation.1.5.8}}
+\backcite {Vecerik2017, Plappert2018}{{12}{2}{chapter.2}}
+\backcite {Ha2020a, Zhao2020}{{12}{2}{chapter.2}}
+\backcite {Fankhauser2013}{{12}{2}{chapter.2}}
+\backcite {Xiao2019, Haarnoja2019a, Tsounis2019}{{12}{2}{chapter.2}}
+\backcite {Da2020c}{{12}{2}{chapter.2}}
+\backcite {Blickhan1993a}{{12}{2.1}{section.2.1}}
+\backcite {Brockman2016c}{{14}{2.2}{section.2.2}}
+\backcite {Harper2019, Pace2017}{{16}{2.3}{section.2.3}}
+\backcite {Vaughan2013}{{24}{2.6.1}{figure.caption.23}}
+\backcite {doi:10.2514/2.4036}{{24}{2.6.1}{figure.caption.23}}
+\backcite {Vaughan2013}{{27}{3}{chapter.3}}
+\backcite {Vaughan2013}{{27}{3.1}{section.3.1}}
+\backcite {Vaughan2013}{{28}{14a}{figure.caption.25}}
+\backcite {Vaughan2013}{{28}{14b}{figure.caption.25}}
+\backcite {Sorensen2008CommandinducedVA}{{28}{3.1}{figure.caption.25}}
+\backcite {Singer:90, Singhose:94a}{{28}{3.1}{figure.caption.25}}
+\backcite {Vaughan2013}{{28}{3.1}{figure.caption.25}}
+\backcite {Singhose:94a}{{28}{3.2}{section.3.2}}
+\backcite {Vaughan2013}{{29}{15}{figure.caption.26}}
+\backcite {Li2001}{{36}{4}{chapter.4}}
+\backcite {Schaff2019e, Luck2019, Ha2019j}{{36}{4}{chapter.4}}
+\backcite {Chen2020}{{36}{4}{chapter.4}}
+\backcite {Wang2019, Hu2020}{{36}{4}{chapter.4}}
+\backcite {Brockman2016c}{{38}{4.2}{section.4.2}}
+\backcite {stable-baselines3}{{41}{4.5}{table.caption.38}}
+\backcite {Li2001}{{49}{5}{chapter.5}}
+\backcite {Wang2019}{{49}{5}{chapter.5}}
+\backcite {Ha2019j}{{49}{5}{chapter.5}}
+\backcite {Schaff2019e}{{49}{5}{chapter.5}}
+\backcite {Brockman2016c}{{53}{5.3.1}{subsection.5.3.1}}
+\backcite {Brockman2016c}{{53}{5.3.2}{subsection.5.3.2}}
+\backcite {Schulman2017f,Haarnoja2018, Schulman2015c}{{72}{6.2}{section.6.2}}
+\backcite {briard:hal-02948764, doi:10.1504/IJDE.2017.085639}{{72}{6.2}{section.6.2}}

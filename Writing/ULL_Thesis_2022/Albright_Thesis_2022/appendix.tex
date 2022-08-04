@@ -1,0 +1,80 @@
+%!TEX root = ULL_thesis_template.tex 
+\chapter{~Appendix: Concurrent Design Algorithm}
+\label{app:concurrent_des_algo}
+The algorithm presented is, in simple terms, an instantiation of the TD3 algorithm within an instantiation of the TD3 algorithm. Line 18 denotes the start of the inner loop and is responsible for learning a mechanical design similar to what is shown in Chapter~\ref{chapter4}. This inner loop runs before the control policy is updated depending on a hyperparameter that is related to how often the mechanical design should be updated. Line 50 concludes the outer loop, which is responsible for learning a control policy. 
+
+The inner and outer loop are concurrent in that the inner loop takes the policy being trained in the outer loop and uses it to simulate the environment to learn an optimal mechanical design. Once the design has been learned, the inner loop passes the design back to the outer loop so that it can modify the environment which it is using to train a control policy. 
+
+\section{Averaging $n$ Learned Designs}
+To best replicate the results shown in Chapter~\ref{chapter4}, rather than instantiating a single instance of the TD3 algorithm within the outer loop to learn a design, $n$ instances are created and the average design found is used. Line 19 shows the start of the looping through $n$ instances of the learning of mechanical designs. Line 45 shows the averaging of the $n$ designs before the environment within the outer loop is modified on line 47. 
+
+\section{Discrete vs. Continuous}
+There are two methods for implementing the inner loop. The first method being that for every instantiation, the policy parameters learning a design (line 20) are initialized from nothing, creating a network without learned intuition regarding good designs. Removing the \textit{load} command on line 20 of the algorithm replicates this method. As for the second method, rather than starting with an untrained policy every design update, the policy is saved and then reloaded the next time the design is updated. During the first design update, $n$ policies are created and learn a design. They are then saved along with their replay buffers so they can be reloaded to continue updating the mechanical design. The differences between these two methods are presented in Section~\ref{sec:disc_vs_cont}.
+
+\section{Design Update Rate}
+This algorithm presents an additional hyperparameter on top of the ones already present, being the rate at which the design is updated within the outer loop. This decision is displayed on line 18. The findings of altering this hyperparameter are presented in Section~\ref{sec:changing_ur}.
+
+% \begin{algorithm}
+%     \caption{TD3 Concurrent Design}\label{alg:concurrent_design}
+\begin{algorithmic}[1]
+    \State Input: initialize policy parameters $\theta_{ctr}$, Q-function parameters $\phi_{1,ctr}$ and $\phi_{2,ctr}$ and empty replay buffer, $\mathcal{D}_{ctr}$
+    \State Set target parameters equal to main parameters: $\theta_{ctr,targ} \leftarrow \theta$, $\phi_{1,ctr,targ} \leftarrow \phi_{1,ctr}$, $\phi_{2,ctr,targ} \leftarrow \phi_{2,ctr}$
+    \While{Not Converged}
+    \State Observe system state $s_{ctr}$ and select action $a_{ctr} = \textup{clip}(\pi_{\theta_{ctr}}(s_{ctr}) + \epsilon, a_{ctr,low}, a_{crt,high}),~~~ \epsilon \sim \mathcal{N}$
+    \State Execute the action $a$ in the environment
+    \State Observe the next state $s_{ctr}'$ and the reward $r_{ctr}$ (verify if the state $s_{ctr}'$ is a terminal state $d_{ctr}$)
+    \State Store $(s_{ctr}, a_{ctr}, r_{ctr}, s_{ctr}', d_{ctr})$ in the replay buffer $\mathcal{D}_{ctr}$
+    \If{$s_{ctr}'$ is terminal}
+    \State Reset environment
+    \EndIf
+    \If{Update Parameter \% Update Frequency}
+    \For{$j$ in range number of updates}
+    \State Sample random batch of transitions from buffer $\mathcal{R}_{ctr}$
+    \State Compute target actions: \newline \hspace*{5em} $a_{ctr} = \textup{clip}(\pi_{\theta_{ctr,targ}}(s_{ctr}') + \textup{clip}(\epsilon, -c, c), a_{ctr,low}, a_{ctr,high}),~~~ \epsilon \sim \mathcal{N}(0,\sigma)$
+    \State Compute targets: \newline \hspace*{5em} $y(r_{ctr},s_{ctr}',d_{ctr}) = r_{ctr} + \gamma\,(1-d_{ctr})\, \underset{i=1,2}{\textup{min}}\, Q_{\phi_{ctr,targ,i}}(s_{ctr}', a_{ctr}(s_{ctr}'))$
+    \State Update the Q-function by way of gradient decent: \newline \hspace*{5em} $\nabla_{\theta_{ctr}}\frac{1}{|B|}\sum_{(s_{ctr},a_{ctr},r_{ctr},s_{ctr}',d_{ctr}) \epsilon B} \, (Q_{\phi_{ctr,i}}(s_{ctr}, a_{ctr}) - y(r_{ctr},s_{ctr}',d_{ctr}))^2$~~~ for $i=1,2$
+    \If{$j$ \% Policy Delay is 0}
+    \If{Update Design \% Update Frequency}
+
+    \For{$i$ in range $n$ instantiations of a mechanal design policy}
+    \State Input: initialize/load policy parameters $\theta_{des}$, Q-function parameters $\phi_{1,des}$ and $\phi_{2,des}$ and empty replay buffer, $\mathcal{D}_{des}$
+    \State Set target parameters equal to main parameters: $\theta_{des,targ} \leftarrow \theta$, $\phi_{1,des,targ} \leftarrow \phi_{1,des}$, $\phi_{2,des,targ} \leftarrow \phi_{2,des}$
+    \While{Not Converged}
+    \State Observe system state $s_{des}$ and select a design $a_{des} = \textup{clip}(\mu_{\theta_{des}}(s_{des}) + \epsilon, a_{des,low}, a_{crt,high}),~~~ \epsilon \sim \mathcal{N}$
+    \State Simulate the design $a$ in the environment using $\pi_{\theta_{ctr}}$
+    \State Observe the simulation $s_{des}'$ and the reward $r_{des}$ (verify if the state $s_{des}'$ is a terminal state $d_{des}$)
+    \State Store $(s_{des}, a_{des}, r_{des}, s_{des}', d_{des})$ in the replay buffer $\mathcal{D}_{des}$
+    \If{$s_{des}'$ is terminal}
+    \State Reset environment
+    \EndIf
+    \If{Update Parameter \% Update Frequency}
+    \For{$j$ in range number of updates}
+    \State Sample random batch of transitions from buffer $\mathcal{R}_{des}$
+    \State Compute target actions: \newline \hspace*{5em} $a_{des} = \textup{clip}(\mu_{\theta_{des,targ}}(s_{des}') + \textup{clip}(\epsilon, -c, c), a_{des,low}, a_{des,high}),~~~ \epsilon \sim \mathcal{N}(0,\sigma)$
+    \State Compute targets: \newline \hspace*{5em} $y(r_{des},s_{des}',d_{des}) = r_{des} + \gamma\,(1-d_{des})\, \underset{i=1,2}{\textup{min}}\, Q_{\phi_{des,targ,i}}(s_{des}', a_{des}(s_{des}'))$
+    \State Update the Q-function by way of gradient decent: \newline \hspace*{5em} $\nabla_{\theta_{des}}\frac{1}{|B|}\sum_{(s_{des},a_{des},r_{des},s_{des}',d_{des}) \epsilon B} \, (Q_{\phi_{des,i}}(s_{des}, a_{des}) - y(r_{des},s_{des}',d_{des}))^2$~~~ for $i=1,2$
+    \If{$j$ \% Policy Delay is 0}
+    \State Update policy by one step of gradient decent: \newline \hspace*{5em} $\nabla_{\theta_{des}}\frac{1}{|B|}\sum_{s_{des} \epsilon B} \, Q_{\phi_{des,1}}(s_{des}, \mu_{\theta_{des}}(s_{des}))$
+    \State Update target networks by: \newline \hspace*{5em} $\phi_{des,targ,i} \leftarrow \rho \phi_{des,targ,i} + (1 - \rho)\phi_{des,i}$~~~ for $i=1,2$ \newline \hspace*{5em} $\theta_{targ} \leftarrow \rho \theta_{targ} + (1 - \rho)\theta$
+    \EndIf
+    \EndFor
+    \EndIf
+    \EndWhile
+
+    \State Capture the final design that was learned as $\textup{d}_i$
+    \EndFor
+    \State Compute the average of the designs: \newline \hspace*{5em} $\mathbb{D} = \frac{\sum_{i = 1}^{n} \textup{d}_i}{n}$
+    \If {Update Method is \textit{continuous}}
+    \State Save the policies, $\mu_i,~~~\textup{for}~i=0 \dots n$,
+    \EndIf 
+
+    \EndIf
+    \State Update the environment with the learned design $\mathbb{D}$
+    \State Update policy by one step of gradient decent: \newline \hspace*{5em} $\nabla_{\theta_{ctr}}\frac{1}{|B|}\sum_{s_{ctr} \epsilon B} \, Q_{\phi_{ctr,1}}(s_{ctr}, \pi_{\theta_{ctr}}(s_{ctr}))$
+    \State Update target networks by: \newline \hspace*{5em} $\phi_{ctr,targ,i} \leftarrow \rho \phi_{crt,targ,i} + (1 - \rho)\phi_{ctr,i}$~~~ for $i=1,2$ \newline \hspace*{5em} $\theta_{crt,targ} \leftarrow \rho \theta_{ctr,targ} + (1 - \rho)\theta_{ctr}$
+    \EndIf
+    \EndFor
+    \EndIf
+    \EndWhile
+    \end{algorithmic}
+% \end{algorithm}

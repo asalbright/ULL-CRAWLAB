@@ -1,0 +1,10 @@
+# Ignore the logs files from training
+/logs
+# Ignore the model files from training
+/models
+*.zip
+*.pkl
+# Ignore pychache files
+*.cache
+# Ignore old training data
+/MECC

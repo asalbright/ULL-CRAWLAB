@@ -1,0 +1,38 @@
+Reviewer 6 of ACC 2022 submission 1034
+
+Comments to the author
+======================
+
+In this paper, the authors adopted reinforcement learning
+(RL) method to find design parameters for a pogo-stick
+jumping system. The paper first introduced the system model
+and the jumping command design, which serves as the control
+input of the system. Then a RL algorithm was designed to
+learn spring constant and damping ratio.
+
+Some comments are listed as follows.
+1.	In Sec. II. B, the authors stated that “Much of the
+research is based in simulation, however, and often the
+controllers are not deployed on physical systems, which
+leads to the question of whether or not these are useful
+techniques in practice.” However, the same problem goes to
+this paper.
+2.	In Sec. II. C, the authors reviewed the concurrent
+design of a system and its controller. However, in this
+work, the authors optimize the system parameters subject to
+some specific control inputs. The literature review may not
+be that relevant to this work.
+3.	The contributions of this paper seem unclear to me.
+   
+4.	If I understand correctly, the RL was tasked with
+learning mechanical parameters of a system to match some
+specific control inputs as described in Sec. IV. What if
+for control inputs with different amplitudes and impulse
+times the learned optimal parameters are different? How did
+you determine which parameters should be used for the
+system? In addition, since there is no guarantee for the
+control inputs to be optimal, how did you verify the
+effectiveness of the designed system? 
+5.	The objective in equation (6) is a little weird.
+The goal is to minimize the difference of R_1 and x_s, why
+didn’t you use a common quadratic utility function?

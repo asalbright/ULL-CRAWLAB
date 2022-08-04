@@ -1,0 +1,11 @@
+%!TEX root = ULL_thesis_template.tex 
+\begin{abstract}
+%
+% A line between \begin{abstract} and the text is required for the appropriate spacing in the document
+%
+
+Legged locomotive systems have been shown to have increased performance abilities when navigating over extremely rough terrain. Additionally, adding flexible components such as series elastic actuators has been shown to increase performance measures such as jumping height, running speed, and power efficiency for legged robots. Controlling systems with flexible components is challenging however due to the nonlinearities that are created within the model of the system. Reinforcement learning (RL) techniques have been used to learn control strategies for locomotive systems and have shown success for generating effective commands. There is, however, a lack of work showing the uses of RL for generating energy efficient commands for flexible systems, particularly of the locomotive variety. Therefore, a monopode jumping system was created, and policies were trained to evaluate the performance of efficient strategies.
+
+To go beyond utilizing RL for generating commands for a fixed system, where optimizing the mechanical/electrical design and controller are completed separately, a concurrent design architecture was purposed. The architecture was built utilizing two instances of an actor-critic RL algorithm. One of the instances learned a control policy and the other concurrently learned a mechanical design optimized for the control policy. The concurrent design architecture was tested to generate designs for the monopode jumping system that performed both efficiently and non-efficiently. The resulting performances were compared to the performances of control policies trained on static environments, and it was shown that in the non-efficient jumping case, the concurrent design outperformed the static design.
+
+\end{abstract}

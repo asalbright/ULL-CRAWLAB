@@ -1,0 +1,56 @@
+Reviewer 12 of ACC 2022 submission 1034
+
+Comments to the author
+======================
+
+The authors present the results of applying deep
+reinforcement learning to optimize the mechanical design of
+a pogo stick bouncing system. Although the work appears to
+be novel, I believe the contribution made here is too small
+for publication at ACC. Furthermore I believe the
+contribution made should be better motivated and explained
+in the text, in addition to fixing up some other minor
+presentation issues.
+
+The biggest issue I have with this paper is that RL seems
+completely unnecessary to solve the problem at hand. With
+two degrees of freedom, this optimization problem can be
+solved with a manual parameter sweep (which is indeed done
+by the authors in figures 6 and 7). The contribution of
+this paper then is not showing that a problem that was
+difficult to solve before can be done with RL, it is merely
+showing that RL can solve one already easy to solve problem
+in this space (likely using more time and compute than a
+brute force search!). I think this should be acknowledged
+in the paper. 
+
+I think the paper would be much stronger using the
+presented pogo stick example as a starting point used to
+validate the approach, and then applying this same
+technique to a higher dimensional or otherwise more
+difficult problem (even if it is still a toy example). 
+
+I also did not see the episode length explicitly mentioned,
+is it 6 timesteps? as implied in the control design
+section?
+
+Now some other nits.
+1. The authors criticize other work for not validating on
+hardware, but the authors do not either, so I am not sure
+what that criticism accomplishes.
+
+2. If you used stable-baslelines you should cite it (also,
+stable-baselines =/= stable-baselines3, though the latter
+is a bit more popular IIRC.
+
+3. I think learning_starts=100 is already the default, I
+don't think you need to explain it, and furthermore calling
+it "the rollout setting" I think is confusing. 
+
+4. It looks like you are using \mathbb{R} for the reward
+function, I think this is normally reserved to represent
+the real numbers. 
+
+5. I am glad to see the authors used 100 random seeds, but
+I think this is overkill, I think something on the order of
+10 is more appropriate.

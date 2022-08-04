@@ -1,0 +1,1 @@
+from gym_three_link_robot.gym_three_link_robot.envs.resources.three_link_robot import ThreeLinkSerialManipulator

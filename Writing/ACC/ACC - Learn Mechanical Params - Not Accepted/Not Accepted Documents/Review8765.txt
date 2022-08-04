@@ -1,0 +1,76 @@
+Reviewer 7 of ACC 2022 submission 1034
+
+Comments to the author
+======================
+
+I have read the submitted paper “Selecting Mechanical
+Parameters of a Monopode Jumping System with Reinforcement
+Learning.” The paper presents an interesting approach to
+leverage reinforcement learning to select the mechanical
+parameters of a pogo-stick system. I have a few comments on
+this paper that follow.
+
+Technical Comments
+
+1. Where do the equations of motion in (1) from from?
+Provide a reference.
+
+2. The state x is a vector. Which direction does it point
+(i.e., what does a positive x mean)? Where is x measured
+from? The bottom of the rod or the ground?
+
+3. Due to the ambiguity in x, it is difficult to understand
+what the two cases in (2) represent. I assume that the top
+case indicates contact with the ground. If contact with the
+ground occurs at x=0, then how can x<0?
+
+4. Figure 1 is nice, but it opens many questions about (1).
+
+5. Many of the parameters in Table I do not connect with
+the parameters in (1).
+
+6. The spring compression limit is 0.008. Where does that
+value come from; is it reasonable?
+
+7. It is not clear why TD3 was used. Why, of the many
+possible selections of reinforcement algorithms, was TD3
+selected?
+
+8. The authors must clarify the reason why they used two
+separate reward functions and how they are used together.
+Why not simply add them to generate one reward function?
+
+9. It is not clear what the dashed blue lines represent in
+Figures 8-15. What does the distribution represent? Why
+does the height go to 0.10m instead of 0.01m?
+
+10. The authors should provide commentary on if the
+obtained spring constants and damping ratios are reasonable
+values on this scale.
+
+
+
+General Comments
+
+1. The abstract and introduction need to be more direct
+about the contribution of the paper.
+
+2. The authors should extend their literature review to
+discuss the differences in their method and the method from
+Chen, He, et. al. I do not feel that rigid and flexible
+systems significantly differ in this type of problem. I
+suspect the authors would disagree with me, but, as a
+reader, it is not clear why.
+
+3. In my opinions, the authors do not sufficiently explain
+why this problem difficult and/or important.
+
+4. Why is reinforcement learning (RL) used other than
+because it is a timely topic? The authors state that RL is
+commonly used to develop control strategies, which is
+accurate. However, why is RL the right tool for determining
+the mechanical parameters in this case?
+
+5. The authors state “the designs the agents learn are
+optimal.” What does this mean in this context, and how is
+it shown?
